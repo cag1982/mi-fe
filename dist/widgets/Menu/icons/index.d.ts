@@ -29,3 +29,4 @@ export { default as EggHouseIcon } from "./EggHouse";
 export { default as GithubIcon } from "./Github";
 export { default as DocsIcon } from "./Docs";
 export { default as FeaturesIcon } from "./Features";
+export { default as AnalyticsIcon } from "./Analytics";
