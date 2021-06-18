@@ -34,11 +34,22 @@ const StyledPanel = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   }
 `;
 
+const StyledRugDoc = styled.a`
+  padding: 16px;
+
+  img {
+    width: 100%;
+  }
+`
+
 const Panel: React.FC<Props> = (props) => {
   const { isPushed, showMenu } = props;
   return (
     <StyledPanel isPushed={isPushed} showMenu={showMenu}>
       <PanelBody {...props} />
+      <StyledRugDoc href="/">
+        <img src="/images/rugdoc-review-badge-with-glow.png" />
+      </StyledRugDoc>
       <PanelFooter {...props} />
     </StyledPanel>
   );

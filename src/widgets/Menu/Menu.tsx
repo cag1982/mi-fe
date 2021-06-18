@@ -10,6 +10,7 @@ import UserBlock from "./UserBlock";
 import { NavProps } from "./types";
 import { MENU_HEIGHT, SIDEBAR_WIDTH_REDUCED, SIDEBAR_WIDTH_FULL } from "./config";
 import Avatar from "./Avatar";
+import Button from "../../components/Button/Button";
 
 const Wrapper = styled.div`
   position: relative;
@@ -55,6 +56,15 @@ const MobileOnlyOverlay = styled(Overlay)`
 
   ${({ theme }) => theme.mediaQueries.nav} {
     display: none;
+  }
+`;
+
+const DesktopOnlyText = styled.span`
+  display: none;
+
+  ${({ theme }) => theme.mediaQueries.lg} {
+    display: inline;
+    margin-right: 6px;
   }
 `;
 
@@ -121,6 +131,16 @@ const Menu: React.FC<NavProps> = ({
           href={homeLink?.href ?? "/"}
         />
         <Flex>
+          <Button
+            size="sm"
+            variant="secondary"
+            style={{ marginRight: '8px' }}
+            onClick={() => {
+              window.location.href = 'https://bsc.dojofarm.finance';
+            }}
+          >
+            <DesktopOnlyText>Switch to</DesktopOnlyText> BSC
+          </Button>
           <UserBlock account={account} login={login} logout={logout} />
           {profile && <Avatar profile={profile} />}
         </Flex>
