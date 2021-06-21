@@ -43,13 +43,15 @@ const StyledRugDoc = styled.a`
 `
 
 const Panel: React.FC<Props> = (props) => {
-  const { isPushed, showMenu } = props;
+  const { isPushed, showMenu, rugDocLink } = props;
   return (
     <StyledPanel isPushed={isPushed} showMenu={showMenu}>
       <PanelBody {...props} />
-      <StyledRugDoc href="/">
-        <img src="/images/rugdoc-review-badge-with-glow.png" />
-      </StyledRugDoc>
+      {rugDocLink ? (
+        <StyledRugDoc href={rugDocLink}>
+          <img src="/images/rugdoc-review-badge-with-glow.png" />
+        </StyledRugDoc>
+      ) : null}
       <PanelFooter {...props} />
     </StyledPanel>
   );

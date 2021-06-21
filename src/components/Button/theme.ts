@@ -31,11 +31,11 @@ export const light: ButtonTheme = {
     backgroundActive: lightColors.tertiary,
     backgroundHover: lightColors.tertiary,
     border: 0,
-    borderColorHover: "currentColor",
+    borderColorHover: lightColors.background,
     boxShadow: "none",
     boxShadowActive: "none",
     color: lightColors.primary,
-    colorHover: "currentColor",
+    colorHover: lightColors.primary,
   },
   [TEXT]: {
     background: "transparent",
@@ -95,6 +95,7 @@ export const dark: ButtonTheme = {
     background: darkColors.tertiary,
     backgroundActive: darkColors.tertiary,
     backgroundHover: darkColors.tertiary,
+    borderColorHover: darkColors.background,
     color: darkColors.primary,
   },
   [TEXT]: {

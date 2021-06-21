@@ -11,6 +11,7 @@ import { NavProps } from "./types";
 import { MENU_HEIGHT, SIDEBAR_WIDTH_REDUCED, SIDEBAR_WIDTH_FULL } from "./config";
 import Avatar from "./Avatar";
 import Button from "../../components/Button/Button";
+import { BscIcon, PolygonIcon } from "../../components/Svg";
 
 const Wrapper = styled.div`
   position: relative;
@@ -81,6 +82,7 @@ const Menu: React.FC<NavProps> = ({
   links,
   priceLink,
   profile,
+  rugDocLink,
   children,
 }) => {
   const { isXl } = useMatchBreakpoints();
@@ -88,6 +90,7 @@ const Menu: React.FC<NavProps> = ({
   const [isPushed, setIsPushed] = useState(!isMobile);
   const [showMenu, setShowMenu] = useState(true);
   const refPrevOffset = useRef(window.pageYOffset);
+  const inBsc = window.location.host.indexOf("bsc") >= 0;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -133,13 +136,13 @@ const Menu: React.FC<NavProps> = ({
         <Flex>
           <Button
             size="sm"
-            variant="secondary"
+            variant="tertiary"
             style={{ marginRight: '8px' }}
             onClick={() => {
-              window.location.href = 'https://bsc.dojofarm.finance';
+              window.location.href = `https://${inBsc ? 'polygon' : 'bsc'}.dojofarm.finance`;
             }}
           >
-            <DesktopOnlyText>Switch to</DesktopOnlyText> BSC
+            {!inBsc ? <BscIcon style={{ marginRight: '6px' }} color="primary" /> : <PolygonIcon style={{ marginRight: '6px' }} color="primary" />} <DesktopOnlyText>Switch to</DesktopOnlyText> {inBsc ? 'Polygon' : 'BSC'}
           </Button>
           <UserBlock account={account} login={login} logout={logout} />
           {profile && <Avatar profile={profile} />}
@@ -159,6 +162,7 @@ const Menu: React.FC<NavProps> = ({
           pushNav={setIsPushed}
           links={links}
           priceLink={priceLink}
+          rugDocLink={rugDocLink}
         />
         <Inner isPushed={isPushed} showMenu={showMenu}>
           {children}

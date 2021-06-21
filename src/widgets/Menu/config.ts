@@ -125,6 +125,11 @@ export const socials = [
     href: "https://docs.dofofarm.finance",
   },
   {
+    label: "Medium",
+    icon: "MediumIcon",
+    href: "https://twitter.com/dojofarm",
+  },
+  {
     label: "Telegram",
     icon: "TelegramIcon",
     href: "https://twitter.com/dojofarm",
