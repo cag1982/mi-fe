@@ -117,27 +117,44 @@ export const socials = [
   {
     label: "Github",
     icon: "GithubIcon",
-    href: "https://www.github.com/dojofarm",
+    href: "https://github.com/dojofarm",
   },
   {
     label: "Docs",
     icon: "DocsIcon",
-    href: "https://docs.dofofarm.finance",
+    href: "https://docs.dojofarm.finance",
   },
   {
     label: "Medium",
     icon: "MediumIcon",
-    href: "https://twitter.com/dojofarm",
-  },
-  {
-    label: "Telegram",
-    icon: "TelegramIcon",
-    href: "https://twitter.com/dojofarm",
+    href: "https://medium.com/@DojoFarmFinance",
   },
   {
     label: "Twitter",
     icon: "TwitterIcon",
-    href: "https://twitter.com/dojofarm",
+    href: "https://twitter.com/dojofarmfinance",
+  },
+  {
+    label: "Telegram",
+    icon: "TelegramIcon",
+    items: [
+      {
+        label: "Oficial",
+        href: "t.me/DojoFarm",
+      },
+      {
+        label: "Spanish",
+        href: "t.me/DojoFarmSpanish",
+      },
+      {
+        label: "Announcements",
+        href: "t.me/DojoFarmAnnoun",
+      },
+      {
+        label: "Price",
+        href: "t.me/DojoFarmPrice",
+      },
+    ],
   },
 ];
 

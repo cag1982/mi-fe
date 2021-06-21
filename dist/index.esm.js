@@ -2261,27 +2261,44 @@ var socials = [
     {
         label: "Github",
         icon: "GithubIcon",
-        href: "https://www.github.com/dojofarm",
+        href: "https://github.com/dojofarm",
     },
     {
         label: "Docs",
         icon: "DocsIcon",
-        href: "https://docs.dofofarm.finance",
+        href: "https://docs.dojofarm.finance",
     },
     {
         label: "Medium",
         icon: "MediumIcon",
-        href: "https://twitter.com/dojofarm",
-    },
-    {
-        label: "Telegram",
-        icon: "TelegramIcon",
-        href: "https://twitter.com/dojofarm",
+        href: "https://medium.com/@DojoFarmFinance",
     },
     {
         label: "Twitter",
         icon: "TwitterIcon",
-        href: "https://twitter.com/dojofarm",
+        href: "https://twitter.com/dojofarmfinance",
+    },
+    {
+        label: "Telegram",
+        icon: "TelegramIcon",
+        items: [
+            {
+                label: "Oficial",
+                href: "t.me/DojoFarm",
+            },
+            {
+                label: "Spanish",
+                href: "t.me/DojoFarmSpanish",
+            },
+            {
+                label: "Announcements",
+                href: "t.me/DojoFarmAnnoun",
+            },
+            {
+                label: "Price",
+                href: "t.me/DojoFarmPrice",
+            },
+        ],
     },
 ];
 var MENU_HEIGHT = 64;
@@ -2416,6 +2433,9 @@ var PanelFooter = function (_a) {
             var Icon = Icons$1[social.icon];
             var iconProps = { width: "24px", color: "textSubtle", style: { cursor: "pointer" } };
             var mr = index < socials.length - 1 ? "8px" : 0;
+            if (social.items) {
+                return (React.createElement(Dropdown, { key: social.label, position: "top", target: React.createElement(Icon, __assign({}, iconProps, { mr: mr })) }, social.items.map(function (item) { return (React.createElement(Link, { external: true, key: item.label, href: item.href, "aria-label": item.label, color: "textSubtle" }, item.label)); })));
+            }
             return (React.createElement(Link, { external: true, key: social.label, href: social.href, "aria-label": social.label, mr: mr },
                 React.createElement(Icon, __assign({}, iconProps))));
         }))));
