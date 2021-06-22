@@ -140,19 +140,19 @@ export const socials = [
     items: [
       {
         label: "Oficial",
-        href: "t.me/DojoFarm",
+        href: "https://t.me/DojoFarm",
       },
       {
         label: "Spanish",
-        href: "t.me/DojoFarmSpanish",
+        href: "https://t.me/DojoFarmSpanish",
+      },
+      {
+        label: "Price Discussion",
+        href: "https://t.me/DojoFarmPrice",
       },
       {
         label: "Announcements",
-        href: "t.me/DojoFarmAnnoun",
-      },
-      {
-        label: "Price",
-        href: "t.me/DojoFarmPrice",
+        href: "https://t.me/DojoFarmAnnoun",
       },
     ],
   },
