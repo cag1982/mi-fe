@@ -139,7 +139,7 @@ export const socials = [
     icon: "TelegramIcon",
     items: [
       {
-        label: "Oficial",
+        label: "Official",
         href: "https://t.me/DojoFarm",
       },
       {
