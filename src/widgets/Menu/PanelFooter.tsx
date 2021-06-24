@@ -135,7 +135,7 @@ const PanelFooter: React.FC<Props> = ({
           {langs.map((lang) => (
             <MenuButton
               key={lang.code}
-              fullwidth
+              fullWidth
               onClick={() => setLang(lang)}
               // Safari fix
               style={{ minHeight: "32px", height: "auto" }}

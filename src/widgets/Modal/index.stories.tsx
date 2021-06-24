@@ -53,7 +53,7 @@ const BackButtonModal: React.FC<BackButtonModalProps> = ({ title, onDismiss }) =
 
   return (
     <Modal title={title} onDismiss={onDismiss} onBack={handleOnBack} hideCloseButton>
-      <Button onClick={onDismiss} variant="text" fullwidth>
+      <Button onClick={onDismiss} variant="text" fullWidth>
         Consumer can still close it.
       </Button>
     </Modal>

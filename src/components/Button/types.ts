@@ -27,11 +27,11 @@ export type ButtonProps = {
   size?: Sizes;
   startIcon?: ReactNode;
   endIcon?: ReactNode;
-  fullwidth?: boolean;
+  fullWidth?: boolean;
   as?: "a" | "button" | typeof Link;
   href?: string;
   external?: boolean;
-  isloading?: boolean;
+  isLoading?: boolean;
   disabled?: boolean;
 } & ButtonTypes &
   SpaceProps;
