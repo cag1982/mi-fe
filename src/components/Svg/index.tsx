@@ -44,5 +44,6 @@ export { default as SyncAltIcon } from "./Icons/SyncAlt";
 export { default as WarningIcon } from "./Icons/Warning";
 export { default as BscIcon } from "./Icons/Bsc";
 export { default as PolygonIcon } from "./Icons/Polygon";
+export { default as PeopleIcon } from "./Icons/People";
 export { default as Svg } from "./Svg";
 export type { SvgProps } from "./types";
