@@ -2382,7 +2382,7 @@ var MenuLink = function (_a) {
     var isHttpLink = href === null || href === void 0 ? void 0 : href.startsWith("http");
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     var Tag = isHttpLink ? "a" : NavLink;
-    var props = isHttpLink ? { href: href } : { to: href };
+    var props = isHttpLink ? { href: href, target: '_blank' } : { to: href };
     return React.createElement(Tag, __assign({}, props, otherProps));
 };
 
@@ -2469,13 +2469,20 @@ var StyledPanel = styled.div(templateObject_1$D || (templateObject_1$D = __makeT
     var isPushed = _a.isPushed;
     return (isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED) + "px";
 });
-var StyledRugDoc = styled.a(templateObject_2$d || (templateObject_2$d = __makeTemplateObject(["\n  padding: 16px;\n\n  img {\n    width: 100%;\n  }\n"], ["\n  padding: 16px;\n\n  img {\n    width: 100%;\n  }\n"])));
+var StyledRugDoc = styled.a(templateObject_2$d || (templateObject_2$d = __makeTemplateObject(["\n  padding: 16px;\n  position: relative;\n\n  img {\n    width: 100%;\n  }\n\n  span {\n    position: absolute;\n    top: 10px;\n    right: 12px;\n    font-size: 10px;\n    color: ", ";\n    border: 1px solid ", ";\n    border-radius: 6px;\n    padding: 4px 6px;\n  }\n"], ["\n  padding: 16px;\n  position: relative;\n\n  img {\n    width: 100%;\n  }\n\n  span {\n    position: absolute;\n    top: 10px;\n    right: 12px;\n    font-size: 10px;\n    color: ", ";\n    border: 1px solid ", ";\n    border-radius: 6px;\n    padding: 4px 6px;\n  }\n"])), function (_a) {
+    var theme = _a.theme;
+    return theme.colors.primary;
+}, function (_a) {
+    var theme = _a.theme;
+    return theme.colors.primary;
+});
 var Panel = function (props) {
     var isPushed = props.isPushed, showMenu = props.showMenu, rugDocLink = props.rugDocLink;
     return (React.createElement(StyledPanel, { isPushed: isPushed, showMenu: showMenu },
         React.createElement(PanelBody, __assign({}, props)),
         rugDocLink ? (React.createElement(StyledRugDoc, { href: rugDocLink },
-            React.createElement("img", { src: "/images/rugdoc-review-badge-with-glow.png" }))) : null,
+            React.createElement("img", { src: "/images/rugdoc-review-badge-with-glow.png" }),
+            React.createElement("span", null, "LOW RISK"))) : null,
         React.createElement(PanelFooter, __assign({}, props))));
 };
 var templateObject_1$D, templateObject_2$d;
