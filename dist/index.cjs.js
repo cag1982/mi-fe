@@ -2493,20 +2493,13 @@ var StyledPanel = styled__default['default'].div(templateObject_1$D || (template
     var isPushed = _a.isPushed;
     return (isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED) + "px";
 });
-var StyledRugDoc = styled__default['default'].a(templateObject_2$d || (templateObject_2$d = __makeTemplateObject(["\n  padding: 16px;\n  position: relative;\n\n  img {\n    width: 100%;\n  }\n\n  span {\n    position: absolute;\n    top: 10px;\n    right: 12px;\n    font-size: 10px;\n    color: ", ";\n    border: 1px solid ", ";\n    border-radius: 6px;\n    padding: 4px 6px;\n  }\n"], ["\n  padding: 16px;\n  position: relative;\n\n  img {\n    width: 100%;\n  }\n\n  span {\n    position: absolute;\n    top: 10px;\n    right: 12px;\n    font-size: 10px;\n    color: ", ";\n    border: 1px solid ", ";\n    border-radius: 6px;\n    padding: 4px 6px;\n  }\n"])), function (_a) {
-    var theme = _a.theme;
-    return theme.colors.primary;
-}, function (_a) {
-    var theme = _a.theme;
-    return theme.colors.primary;
-});
+var StyledRugDoc = styled__default['default'].a(templateObject_2$d || (templateObject_2$d = __makeTemplateObject(["\n  padding: 16px;\n\n  img {\n    width: 100%;\n  }\n"], ["\n  padding: 16px;\n\n  img {\n    width: 100%;\n  }\n"])));
 var Panel = function (props) {
     var isPushed = props.isPushed, showMenu = props.showMenu, rugDocLink = props.rugDocLink;
     return (React__default['default'].createElement(StyledPanel, { isPushed: isPushed, showMenu: showMenu },
         React__default['default'].createElement(PanelBody, __assign({}, props)),
         rugDocLink ? (React__default['default'].createElement(StyledRugDoc, { href: rugDocLink },
-            React__default['default'].createElement("img", { src: "/images/rugdoc-review-badge-with-glow.png" }),
-            React__default['default'].createElement("span", null, "LOW RISK"))) : null,
+            React__default['default'].createElement("img", { src: "/images/rugdoc-review-badge-with-glow.png" }))) : null,
         React__default['default'].createElement(PanelFooter, __assign({}, props))));
 };
 var templateObject_1$D, templateObject_2$d;

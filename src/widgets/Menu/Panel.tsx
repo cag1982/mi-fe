@@ -36,21 +36,9 @@ const StyledPanel = styled.div<{ isPushed: boolean; showMenu: boolean }>`
 
 const StyledRugDoc = styled.a`
   padding: 16px;
-  position: relative;
 
   img {
     width: 100%;
-  }
-
-  span {
-    position: absolute;
-    top: 10px;
-    right: 12px;
-    font-size: 10px;
-    color: ${({ theme }) => theme.colors.primary};
-    border: 1px solid ${({ theme }) => theme.colors.primary};
-    border-radius: 6px;
-    padding: 4px 6px;
   }
 `
 
@@ -62,7 +50,6 @@ const Panel: React.FC<Props> = (props) => {
       {rugDocLink ? (
         <StyledRugDoc href={rugDocLink}>
           <img src="/images/rugdoc-review-badge-with-glow.png" />
-          <span>LOW RISK</span>
         </StyledRugDoc>
       ) : null}
       <PanelFooter {...props} />
